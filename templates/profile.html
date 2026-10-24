@@ -1,0 +1,65 @@
+{% extends "student_base.html" %}
+{% set active = 'profile' %}
+{% block title %}My Profile - Career Compass{% endblock %}
+{% block student_content %}
+
+<h3>My Profile</h3>
+<form method="POST">
+    <div class="card card-custom p-4 mt-3">
+        <h5>Academic Information</h5>
+        <div class="row g-3 mt-1">
+            <div class="col-md-6">
+                <label class="form-label">Education</label>
+                <input type="text" name="education" class="form-control" value="{{ current_user.profile.education or '' }}" placeholder="e.g. BSc Computer Science">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">College</label>
+                <input type="text" name="college" class="form-control" value="{{ current_user.profile.college or '' }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Year</label>
+                <input type="text" name="year" class="form-control" value="{{ current_user.profile.year or '' }}" placeholder="e.g. Final Year">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">CGPA (0-10)</label>
+                <input type="number" step="0.01" min="0" max="10" name="cgpa" class="form-control" value="{{ current_user.profile.cgpa or '' }}">
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-custom p-4 mt-3">
+        <h5>My Skills</h5>
+        <p class="text-muted small">Tick the skills you have, and choose your current level for each.</p>
+        <div class="row">
+            {% for skill in all_skills %}
+            <div class="col-md-6 d-flex align-items-center gap-2 mb-2">
+                <input type="checkbox" name="skill_id" value="{{ skill.id }}" id="skill_{{ skill.id }}"
+                       {% if skill.id in user_skill_map %}checked{% endif %}>
+                <label for="skill_{{ skill.id }}" class="flex-grow-1 mb-0">{{ skill.name }}</label>
+                <select name="level_{{ skill.id }}" class="form-select form-select-sm" style="width: 140px;">
+                    {% for lvl in level_choices %}
+                    <option value="{{ lvl }}" {% if user_skill_map.get(skill.id) == lvl %}selected{% endif %}>{{ lvl }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="card card-custom p-4 mt-3">
+        <h5>My Interests</h5>
+        <div class="row">
+            {% for interest in all_interests %}
+            <div class="col-md-4 form-check mb-2">
+                <input type="checkbox" class="form-check-input" name="interest_id" value="{{ interest.id }}" id="interest_{{ interest.id }}"
+                       {% if interest.id in user_interest_ids %}checked{% endif %}>
+                <label class="form-check-label" for="interest_{{ interest.id }}">{{ interest.name }}</label>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-amber mt-3">Save Profile</button>
+</form>
+
+{% endblock %}

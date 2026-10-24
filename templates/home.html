@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Career Compass - Find Your Career Path{% endblock %}
+{% block content %}
+
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="display-5">Discover the Career That Fits You</h1>
+        <p class="subtitle mx-auto lead">Understand your skills, explore suitable career options, and get a personalized learning roadmap.</p>
+        <div class="mt-4">
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('student.assessment') }}" class="btn btn-amber btn-lg me-2">Take Career Assessment</a>
+            {% else %}
+                <a href="{{ url_for('auth.register') }}" class="btn btn-amber btn-lg me-2">Take Career Assessment</a>
+            {% endif %}
+            <a href="{{ url_for('main.careers') }}" class="btn btn-outline-light btn-lg">Explore Careers</a>
+        </div>
+    </div>
+</section>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">How It Works</h2>
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <div class="p-4 card-custom card h-100">
+                <div class="step-eyebrow">Step 1</div>
+                <h5 class="mt-2">Create Your Profile</h5>
+                <p class="text-muted">Add your education, skills, and interests.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 card-custom card h-100">
+                <div class="step-eyebrow">Step 2</div>
+                <h5 class="mt-2">Complete the Assessment</h5>
+                <p class="text-muted">Answer a short 16-question career quiz.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 card-custom card h-100">
+                <div class="step-eyebrow">Step 3</div>
+                <h5 class="mt-2">Get Your Recommendations</h5>
+                <p class="text-muted">See your top matched careers with a full roadmap.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Popular Careers</h2>
+    <div class="row g-4">
+        {% for c in popular_careers %}
+        <div class="col-md-3 col-sm-6">
+            <div class="card card-custom career-card h-100 p-3">
+                <h6>{{ c.name }}</h6>
+                <p class="text-muted small">{{ c.description[:80] }}...</p>
+                <a href="{{ url_for('main.career_public_details', career_id=c.id) }}" class="btn btn-sm btn-outline-navy">View Details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="card-custom card p-4 bg-white">
+        <h2 class="text-center mb-3">Why Use Career Compass?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h6>Simple &amp; Explainable</h6>
+                <p class="text-muted small">A transparent scoring system - no black-box AI.</p>
+            </div>
+            <div class="col-md-4">
+                <h6>Skill Gap Analysis</h6>
+                <p class="text-muted small">See exactly which skills to improve for your target career.</p>
+            </div>
+            <div class="col-md-4">
+                <h6>Personalized Roadmap</h6>
+                <p class="text-muted small">Step-by-step learning path with beginner-friendly projects.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

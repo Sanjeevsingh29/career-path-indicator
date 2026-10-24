@@ -1,0 +1,28 @@
+{% extends "admin/admin_base.html" %}
+{% set active = 'dashboard' %}
+{% block title %}Admin Dashboard - Career Compass{% endblock %}
+{% block admin_content %}
+
+<h3>Admin Dashboard</h3>
+<div class="row g-4 mt-2">
+    <div class="col-md-4">
+        <div class="card card-custom p-4">
+            <h6 class="text-muted">Registered Students</h6>
+            <h2>{{ stats.total_students }}</h2>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-custom p-4">
+            <h6 class="text-muted">Careers in System</h6>
+            <h2>{{ stats.total_careers }}</h2>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-custom p-4">
+            <h6 class="text-muted">Quiz Questions</h6>
+            <h2>{{ stats.total_questions }}</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

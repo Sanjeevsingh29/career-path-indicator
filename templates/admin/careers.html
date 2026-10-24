@@ -1,0 +1,30 @@
+{% extends "admin/admin_base.html" %}
+{% set active = 'careers' %}
+{% block title %}Manage Careers - Career Compass{% endblock %}
+{% block admin_content %}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h3>Manage Careers</h3>
+    <a href="{{ url_for('admin.add_career') }}" class="btn btn-amber">+ Add Career</a>
+</div>
+
+<table class="table table-sm mt-3 bg-white">
+    <thead><tr><th>Name</th><th>Required Skills</th><th>Actions</th></tr></thead>
+    <tbody>
+    {% for c in careers %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.required_skills|length }} skills</td>
+            <td>
+                <a href="{{ url_for('admin.edit_career', career_id=c.id) }}" class="btn btn-sm btn-outline-navy">Edit</a>
+                <form method="POST" action="{{ url_for('admin.delete_career', career_id=c.id) }}" class="d-inline"
+                      onsubmit="return confirm('Delete this career?');">
+                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

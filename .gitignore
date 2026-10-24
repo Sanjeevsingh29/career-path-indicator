@@ -1,0 +1,25 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Bytecode & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment files
+.env
+
+# Vercel build output
+.vercel/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/

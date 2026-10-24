@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ career.name }} - Career Compass{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2>{{ career.name }}</h2>
+    <p class="text-muted">{{ career.description }}</p>
+
+    <h5 class="mt-4">Required Skills</h5>
+    <ul>
+        {% for cs in career.required_skills %}
+        <li>{{ cs.skill.name }} <span class="text-muted">({{ cs.required_level }})</span></li>
+        {% endfor %}
+    </ul>
+
+    <h5 class="mt-4">Suggested Projects</h5>
+    <div class="row">
+        {% for level in ["Beginner", "Intermediate", "Advanced"] %}
+        <div class="col-md-4">
+            <h6>{{ level }}</h6>
+            <ul>
+                {% for p in career.projects if p.level == level %}
+                <li>{{ p.title }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if current_user.is_authenticated and not current_user.is_admin %}
+    <a href="{{ url_for('student.career_details', career_id=career.id) }}" class="btn btn-amber mt-3">See My Personalized Match</a>
+    {% else %}
+    <a href="{{ url_for('auth.register') }}" class="btn btn-amber mt-3">Register to See Your Match %</a>
+    {% endif %}
+</div>
+{% endblock %}

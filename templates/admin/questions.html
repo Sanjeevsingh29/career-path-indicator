@@ -1,0 +1,30 @@
+{% extends "admin/admin_base.html" %}
+{% set active = 'questions' %}
+{% block title %}Manage Quiz Questions - Career Compass{% endblock %}
+{% block admin_content %}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h3>Manage Quiz Questions</h3>
+    <a href="{{ url_for('admin.add_question') }}" class="btn btn-amber">+ Add Question</a>
+</div>
+
+<table class="table table-sm mt-3 bg-white">
+    <thead><tr><th>Question</th><th>Category</th><th>Options</th><th>Actions</th></tr></thead>
+    <tbody>
+    {% for q in questions %}
+        <tr>
+            <td>{{ q.text }}</td>
+            <td>{{ q.category }}</td>
+            <td>{{ q.options|length }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('admin.delete_question', question_id=q.id) }}" class="d-inline"
+                      onsubmit="return confirm('Delete this question?');">
+                    <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

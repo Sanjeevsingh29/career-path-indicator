@@ -1,0 +1,54 @@
+{% extends "student_base.html" %}
+{% set active = 'dashboard' %}
+{% block title %}Dashboard - Career Compass{% endblock %}
+{% block student_content %}
+
+<h3>Welcome, {{ current_user.name }}!</h3>
+<p class="text-muted">Here's a quick summary of your career journey so far.</p>
+
+<div class="row g-4 mt-2">
+    <div class="col-md-4">
+        <div class="card card-custom p-3 h-100">
+            <h6 class="text-muted">Profile Completion</h6>
+            <div class="progress skill-bar my-2">
+                <div class="progress-bar bg-success" style="width: {{ completion }}%"></div>
+            </div>
+            <span>{{ completion }}% complete</span>
+            <a href="{{ url_for('student.profile') }}" class="btn btn-sm btn-outline-navy mt-3">Update Profile</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-custom p-3 h-100">
+            <h6 class="text-muted">Latest Assessment Result</h6>
+            {% if latest_result %}
+                <h4>{{ latest_result.career.name }}</h4>
+                <span class="match-badge">{{ latest_result.score }}% Match</span>
+                <a href="{{ url_for('student.career_details', career_id=latest_result.career_id) }}" class="btn btn-sm btn-outline-navy mt-3">View Details</a>
+            {% else %}
+                <p class="text-muted">You haven't taken the assessment yet.</p>
+                <a href="{{ url_for('student.assessment') }}" class="btn btn-sm btn-amber">Take Assessment</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-custom p-3 h-100">
+            <h6 class="text-muted">Skills Recorded</h6>
+            <h4>{{ skills_count }}</h4>
+            <p class="text-muted small">Skills currently listed in your profile.</p>
+            <a href="{{ url_for('student.profile') }}" class="btn btn-sm btn-outline-navy mt-auto">Manage Skills</a>
+        </div>
+    </div>
+</div>
+
+<div class="card card-custom p-4 mt-4">
+    <h5>Quick Actions</h5>
+    <div class="d-flex gap-2 flex-wrap mt-2">
+        <a href="{{ url_for('student.assessment') }}" class="btn btn-amber">Retake Assessment</a>
+        <a href="{{ url_for('student.compare') }}" class="btn btn-outline-navy">Compare Careers</a>
+        <a href="{{ url_for('main.careers') }}" class="btn btn-outline-navy">Browse All Careers</a>
+    </div>
+</div>
+
+{% endblock %}

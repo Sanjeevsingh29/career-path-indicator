@@ -1,0 +1,1077 @@
+{
+  "careers": [
+    {
+      "id": 1,
+      "name": "Software Developer",
+      "description": "Designs, builds and maintains software applications using programming languages, data structures and problem-solving skills.",
+      "skills": {
+        "Python": "Intermediate",
+        "Java": "Basic",
+        "Git": "Basic",
+        "SQL": "Basic",
+        "Problem Solving": "Intermediate"
+      },
+      "interests": [
+        "Programming",
+        "Logical Problem Solving",
+        "Building Apps"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Programming Basics",
+          "details": [
+            "Learn Python or Java",
+            "Practice problem solving"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Data Structures",
+          "details": [
+            "Arrays, Lists, Stacks, Queues",
+            "Basic algorithms"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Database Basics",
+          "details": [
+            "SQL fundamentals",
+            "Database design basics"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Build Projects",
+          "details": [
+            "Build 2-3 small projects",
+            "Upload projects to GitHub"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "To-Do Application"
+        ],
+        "Intermediate": [
+          "Library Management System"
+        ],
+        "Advanced": [
+          "E-Commerce Website"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Web Developer",
+      "description": "Builds websites and web applications, working on front-end interfaces and/or back-end logic.",
+      "skills": {
+        "HTML/CSS": "Intermediate",
+        "JavaScript": "Intermediate",
+        "Git": "Basic",
+        "SQL": "Basic"
+      },
+      "interests": [
+        "Programming",
+        "Designing Interfaces",
+        "Building Apps"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Web Basics",
+          "details": [
+            "HTML5 and CSS3",
+            "Responsive design"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "JavaScript",
+          "details": [
+            "DOM manipulation",
+            "Basic JS frameworks"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Backend Basics",
+          "details": [
+            "Flask or Node.js basics",
+            "REST APIs"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Build Projects",
+          "details": [
+            "Build a portfolio website",
+            "Build a small full-stack app"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Personal Portfolio Website"
+        ],
+        "Intermediate": [
+          "Blog Platform with Login"
+        ],
+        "Advanced": [
+          "Full-stack Booking System"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Data Analyst",
+      "description": "Collects, cleans and analyzes data to find trends and support business decisions using statistics and visualization tools.",
+      "skills": {
+        "SQL": "Intermediate",
+        "Data Analysis": "Intermediate",
+        "Statistics": "Basic",
+        "Python": "Basic"
+      },
+      "interests": [
+        "Working with Numbers/Data",
+        "Analyzing Trends",
+        "Databases"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Excel & SQL",
+          "details": [
+            "Spreadsheet analysis",
+            "SQL queries"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Statistics",
+          "details": [
+            "Descriptive statistics",
+            "Basic probability"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Python for Data",
+          "details": [
+            "Pandas basics",
+            "Data cleaning"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Visualization",
+          "details": [
+            "Build dashboards",
+            "Present insights"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Sales Data Analysis"
+        ],
+        "Intermediate": [
+          "Student Performance Dashboard"
+        ],
+        "Advanced": [
+          "Business Data Dashboard"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Data Scientist",
+      "description": "Uses statistics, programming and machine learning to extract insights and build predictive models from data.",
+      "skills": {
+        "Python": "Intermediate",
+        "Statistics": "Intermediate",
+        "Machine Learning": "Basic",
+        "SQL": "Basic"
+      },
+      "interests": [
+        "Working with Numbers/Data",
+        "Learning New Technologies",
+        "Analyzing Trends"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Foundations",
+          "details": [
+            "Python + Statistics basics",
+            "Data handling with Pandas"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Machine Learning Basics",
+          "details": [
+            "Regression & Classification",
+            "Scikit-learn basics"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Practice",
+          "details": [
+            "Kaggle beginner datasets",
+            "Model evaluation basics"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Projects",
+          "details": [
+            "Build 1-2 ML mini projects",
+            "Document your process"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "House Price Prediction"
+        ],
+        "Intermediate": [
+          "Customer Churn Prediction"
+        ],
+        "Advanced": [
+          "Recommendation System Prototype"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "AI/ML Engineer",
+      "description": "Builds and deploys machine learning models and AI-driven features into real applications.",
+      "skills": {
+        "Python": "Advanced",
+        "Machine Learning": "Intermediate",
+        "Statistics": "Basic",
+        "Git": "Basic"
+      },
+      "interests": [
+        "Learning New Technologies",
+        "Programming",
+        "Working with Numbers/Data"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Programming + Math",
+          "details": [
+            "Strong Python",
+            "Linear algebra basics"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "ML Fundamentals",
+          "details": [
+            "Supervised/unsupervised learning",
+            "Model tuning basics"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Deployment Basics",
+          "details": [
+            "Save/load models",
+            "Simple Flask API for a model"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Projects",
+          "details": [
+            "Build an end-to-end ML mini project"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Spam Email Classifier"
+        ],
+        "Intermediate": [
+          "Image Classification App"
+        ],
+        "Advanced": [
+          "ML Model Deployed as a Web API"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "UI/UX Designer",
+      "description": "Designs user interfaces and experiences that are easy, pleasant and efficient to use.",
+      "skills": {
+        "UI/UX Design": "Intermediate",
+        "Figma": "Intermediate",
+        "HTML/CSS": "Basic"
+      },
+      "interests": [
+        "Designing Interfaces",
+        "Building Apps"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Design Basics",
+          "details": [
+            "Color, typography, layout",
+            "Design principles"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Tools",
+          "details": [
+            "Learn Figma",
+            "Wireframing and prototyping"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "User Research",
+          "details": [
+            "Basic usability testing",
+            "User personas"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Portfolio",
+          "details": [
+            "Design 2-3 case studies",
+            "Build a design portfolio"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Redesign a Simple App Screen"
+        ],
+        "Intermediate": [
+          "Mobile App UI Kit"
+        ],
+        "Advanced": [
+          "Full Product Design Case Study"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Mobile App Developer",
+      "description": "Builds mobile applications for Android/iOS using cross-platform or native frameworks.",
+      "skills": {
+        "Mobile Development (Flutter/React Native)": "Intermediate",
+        "JavaScript": "Basic",
+        "Git": "Basic"
+      },
+      "interests": [
+        "Building Apps",
+        "Programming"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Basics",
+          "details": [
+            "Learn Flutter or React Native basics",
+            "App layout concepts"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "State & Navigation",
+          "details": [
+            "State management basics",
+            "Multi-screen navigation"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "APIs",
+          "details": [
+            "Connect app to a REST API"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Projects",
+          "details": [
+            "Build and publish a demo app"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Notes Taking App"
+        ],
+        "Intermediate": [
+          "Weather App with API"
+        ],
+        "Advanced": [
+          "E-commerce Mobile App"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Cloud Engineer",
+      "description": "Sets up, manages and secures cloud infrastructure and deployments.",
+      "skills": {
+        "Cloud Basics (AWS/Azure)": "Intermediate",
+        "Networking": "Basic",
+        "Git": "Basic"
+      },
+      "interests": [
+        "Cloud & Infrastructure",
+        "Automating Tasks"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Cloud Basics",
+          "details": [
+            "Core AWS/Azure services",
+            "Cloud fundamentals certification prep"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Networking",
+          "details": [
+            "Basic networking concepts",
+            "Security groups/firewalls"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Deployment",
+          "details": [
+            "Deploy a simple app to the cloud"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Automation",
+          "details": [
+            "Basic scripting for automation"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Host a Static Website on Cloud"
+        ],
+        "Intermediate": [
+          "Deploy a Flask App to the Cloud"
+        ],
+        "Advanced": [
+          "Set up a Simple CI/CD Pipeline"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Database Administrator",
+      "description": "Manages, secures and optimizes databases that store an organization's data.",
+      "skills": {
+        "SQL": "Advanced",
+        "Data Analysis": "Basic",
+        "Networking": "Basic"
+      },
+      "interests": [
+        "Databases",
+        "Working with Numbers/Data"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "SQL Mastery",
+          "details": [
+            "Advanced SQL queries",
+            "Indexes and optimization"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Database Design",
+          "details": [
+            "Normalization",
+            "ER modeling"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Administration",
+          "details": [
+            "Backups and recovery basics",
+            "User permissions"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Practice",
+          "details": [
+            "Manage a sample production-like database"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Design a Database for a Small Shop"
+        ],
+        "Intermediate": [
+          "Optimize Slow SQL Queries Project"
+        ],
+        "Advanced": [
+          "Backup & Recovery Simulation"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "QA/Software Tester",
+      "description": "Tests software to find bugs and ensure it works correctly before release.",
+      "skills": {
+        "Software Testing": "Intermediate",
+        "SQL": "Basic",
+        "Problem Solving": "Basic"
+      },
+      "interests": [
+        "Logical Problem Solving",
+        "Programming"
+      ],
+      "roadmap": [
+        {
+          "step": 1,
+          "title": "Testing Basics",
+          "details": [
+            "Manual testing fundamentals",
+            "Writing test cases"
+          ]
+        },
+        {
+          "step": 2,
+          "title": "Bug Tracking",
+          "details": [
+            "Using a bug tracking tool",
+            "Reporting bugs clearly"
+          ]
+        },
+        {
+          "step": 3,
+          "title": "Automation Basics",
+          "details": [
+            "Basic automated testing concepts"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "Practice",
+          "details": [
+            "Test a real small application thoroughly"
+          ]
+        }
+      ],
+      "projects": {
+        "Beginner": [
+          "Write Test Cases for a To-Do App"
+        ],
+        "Intermediate": [
+          "Manual Testing Report for a Web App"
+        ],
+        "Advanced": [
+          "Basic Automated Test Suite"
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Do you enjoy writing computer programs?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 1,
+          "text": "Yes, I enjoy it a lot",
+          "scores": {
+            "Software Developer": 3,
+            "Web Developer": 2,
+            "AI/ML Engineer": 2
+          }
+        },
+        {
+          "id": 2,
+          "text": "Somewhat, depends on the problem",
+          "scores": {
+            "Software Developer": 1,
+            "QA/Software Tester": 1
+          }
+        },
+        {
+          "id": 3,
+          "text": "Not really",
+          "scores": {
+            "UI/UX Designer": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Do you enjoy working with databases and structured data?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 4,
+          "text": "Yes, I like organizing and querying data",
+          "scores": {
+            "Database Administrator": 3,
+            "Data Analyst": 2
+          }
+        },
+        {
+          "id": 5,
+          "text": "A little",
+          "scores": {
+            "Data Analyst": 1
+          }
+        },
+        {
+          "id": 6,
+          "text": "Not particularly",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Do you like solving logical/mathematical problems?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 7,
+          "text": "Yes, I enjoy logic puzzles and math",
+          "scores": {
+            "Data Scientist": 2,
+            "AI/ML Engineer": 2,
+            "Software Developer": 1
+          }
+        },
+        {
+          "id": 8,
+          "text": "Sometimes",
+          "scores": {
+            "QA/Software Tester": 1
+          }
+        },
+        {
+          "id": 9,
+          "text": "Not my favorite",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Do you enjoy designing how an app or website looks and feels?",
+      "category": "Personal",
+      "options": [
+        {
+          "id": 10,
+          "text": "Yes, visual design excites me",
+          "scores": {
+            "UI/UX Designer": 3
+          }
+        },
+        {
+          "id": 11,
+          "text": "A little interested",
+          "scores": {
+            "UI/UX Designer": 1,
+            "Web Developer": 1
+          }
+        },
+        {
+          "id": 12,
+          "text": "Not interested",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Do you enjoy working with numbers, charts and statistics?",
+      "category": "Personal",
+      "options": [
+        {
+          "id": 13,
+          "text": "Yes, a lot",
+          "scores": {
+            "Data Analyst": 3,
+            "Data Scientist": 2
+          }
+        },
+        {
+          "id": 14,
+          "text": "Somewhat",
+          "scores": {
+            "Data Analyst": 1
+          }
+        },
+        {
+          "id": 15,
+          "text": "Not really",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Do you enjoy learning new technologies and tools?",
+      "category": "Personal",
+      "options": [
+        {
+          "id": 16,
+          "text": "Yes, I love exploring new tech",
+          "scores": {
+            "AI/ML Engineer": 2,
+            "Cloud Engineer": 2,
+            "Mobile App Developer": 1
+          }
+        },
+        {
+          "id": 17,
+          "text": "Sometimes, if needed",
+          "scores": {
+            "Software Developer": 1
+          }
+        },
+        {
+          "id": 18,
+          "text": "I prefer sticking to what I know",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Do you prefer coding or designing interfaces?",
+      "category": "WorkPreference",
+      "options": [
+        {
+          "id": 19,
+          "text": "Coding",
+          "scores": {
+            "Software Developer": 2,
+            "Web Developer": 1,
+            "Mobile App Developer": 1
+          }
+        },
+        {
+          "id": 20,
+          "text": "Designing",
+          "scores": {
+            "UI/UX Designer": 3
+          }
+        },
+        {
+          "id": 21,
+          "text": "Both equally",
+          "scores": {
+            "Web Developer": 1,
+            "UI/UX Designer": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Do you prefer analytical work over creative work?",
+      "category": "WorkPreference",
+      "options": [
+        {
+          "id": 22,
+          "text": "Yes, I prefer analytical work",
+          "scores": {
+            "Data Analyst": 2,
+            "Data Scientist": 2,
+            "Database Administrator": 1
+          }
+        },
+        {
+          "id": 23,
+          "text": "I prefer creative work",
+          "scores": {
+            "UI/UX Designer": 2
+          }
+        },
+        {
+          "id": 24,
+          "text": "I enjoy a mix of both",
+          "scores": {
+            "Software Developer": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Do you enjoy building mobile apps?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 25,
+          "text": "Yes, definitely",
+          "scores": {
+            "Mobile App Developer": 3
+          }
+        },
+        {
+          "id": 26,
+          "text": "Maybe, haven't tried much",
+          "scores": {
+            "Mobile App Developer": 1
+          }
+        },
+        {
+          "id": 27,
+          "text": "Not interested",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Do you enjoy working with cloud platforms and servers?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 28,
+          "text": "Yes, infrastructure interests me",
+          "scores": {
+            "Cloud Engineer": 3
+          }
+        },
+        {
+          "id": 29,
+          "text": "A little curious",
+          "scores": {
+            "Cloud Engineer": 1
+          }
+        },
+        {
+          "id": 30,
+          "text": "Not really",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Do you enjoy finding bugs and testing how things break?",
+      "category": "Personal",
+      "options": [
+        {
+          "id": 31,
+          "text": "Yes, I like finding issues",
+          "scores": {
+            "QA/Software Tester": 3
+          }
+        },
+        {
+          "id": 32,
+          "text": "Sometimes",
+          "scores": {
+            "QA/Software Tester": 1
+          }
+        },
+        {
+          "id": 33,
+          "text": "Not really",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Do you enjoy training models to make predictions?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 34,
+          "text": "Yes, machine learning interests me",
+          "scores": {
+            "AI/ML Engineer": 3,
+            "Data Scientist": 2
+          }
+        },
+        {
+          "id": 35,
+          "text": "A little curious",
+          "scores": {
+            "Data Scientist": 1
+          }
+        },
+        {
+          "id": 36,
+          "text": "Not really",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Do you prefer front-end (visuals) or back-end (logic) work?",
+      "category": "WorkPreference",
+      "options": [
+        {
+          "id": 37,
+          "text": "Front-end",
+          "scores": {
+            "Web Developer": 2,
+            "UI/UX Designer": 1
+          }
+        },
+        {
+          "id": 38,
+          "text": "Back-end",
+          "scores": {
+            "Software Developer": 2,
+            "Database Administrator": 1
+          }
+        },
+        {
+          "id": 39,
+          "text": "Both / Full-stack",
+          "scores": {
+            "Web Developer": 2,
+            "Software Developer": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Do you enjoy presenting insights and findings to others?",
+      "category": "Personal",
+      "options": [
+        {
+          "id": 40,
+          "text": "Yes, I enjoy presenting data-driven insights",
+          "scores": {
+            "Data Analyst": 2,
+            "Data Scientist": 1
+          }
+        },
+        {
+          "id": 41,
+          "text": "Sometimes",
+          "scores": {
+            "Data Analyst": 1
+          }
+        },
+        {
+          "id": 42,
+          "text": "Not really",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Do you enjoy working independently on long, detail-heavy tasks?",
+      "category": "WorkPreference",
+      "options": [
+        {
+          "id": 43,
+          "text": "Yes, I enjoy deep focused work",
+          "scores": {
+            "Software Developer": 1,
+            "Data Scientist": 1,
+            "Database Administrator": 1
+          }
+        },
+        {
+          "id": 44,
+          "text": "I prefer collaborative, interactive tasks",
+          "scores": {
+            "UI/UX Designer": 1,
+            "QA/Software Tester": 1
+          }
+        },
+        {
+          "id": 45,
+          "text": "Depends on the task",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "text": "How comfortable are you with mathematics and statistics?",
+      "category": "Technical",
+      "options": [
+        {
+          "id": 46,
+          "text": "Very comfortable",
+          "scores": {
+            "Data Scientist": 2,
+            "AI/ML Engineer": 2
+          }
+        },
+        {
+          "id": 47,
+          "text": "Somewhat comfortable",
+          "scores": {
+            "Data Analyst": 1
+          }
+        },
+        {
+          "id": 48,
+          "text": "Not very comfortable",
+          "scores": {}
+        }
+      ]
+    }
+  ],
+  "skills": [
+    "Cloud Basics (AWS/Azure)",
+    "Data Analysis",
+    "Figma",
+    "Git",
+    "HTML/CSS",
+    "Java",
+    "JavaScript",
+    "Machine Learning",
+    "Mobile Development (Flutter/React Native)",
+    "Networking",
+    "Problem Solving",
+    "Python",
+    "SQL",
+    "Software Testing",
+    "Statistics",
+    "UI/UX Design"
+  ],
+  "interests": [
+    "Analyzing Trends",
+    "Automating Tasks",
+    "Building Apps",
+    "Cloud & Infrastructure",
+    "Databases",
+    "Designing Interfaces",
+    "Learning New Technologies",
+    "Logical Problem Solving",
+    "Programming",
+    "Working with Numbers/Data"
+  ]
+}

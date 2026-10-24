@@ -1,0 +1,36 @@
+{% extends "admin/admin_base.html" %}
+{% set active = 'careers' %}
+{% block title %}{{ 'Edit' if career else 'Add' }} Career - Career Compass{% endblock %}
+{% block admin_content %}
+
+<h3>{{ 'Edit' if career else 'Add' }} Career</h3>
+<form method="POST" class="card card-custom p-4 mt-3">
+    <div class="mb-3">
+        <label class="form-label">Career Name</label>
+        <input type="text" name="name" class="form-control" value="{{ career.name if career else '' }}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="3">{{ career.description if career else '' }}</textarea>
+    </div>
+
+    <h6>Required Skills</h6>
+    <div class="row">
+        {% for skill in all_skills %}
+        <div class="col-md-6 d-flex align-items-center gap-2 mb-2">
+            <input type="checkbox" name="skill_id" value="{{ skill.id }}" id="skill_{{ skill.id }}"
+                   {% if current_skill_ids and skill.id in current_skill_ids %}checked{% endif %}>
+            <label for="skill_{{ skill.id }}" class="flex-grow-1 mb-0">{{ skill.name }}</label>
+            <select name="level_{{ skill.id }}" class="form-select form-select-sm" style="width: 140px;">
+                {% for lvl in ["Beginner","Basic","Intermediate","Advanced"] %}
+                <option value="{{ lvl }}">{{ lvl }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-amber mt-3">Save Career</button>
+</form>
+
+{% endblock %}

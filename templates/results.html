@@ -1,0 +1,53 @@
+{% extends "student_base.html" %}
+{% set active = 'assessment' %}
+{% block title %}Your Results - Career Compass{% endblock %}
+{% block student_content %}
+
+<h3>Your Top Career Recommendations</h3>
+<p class="text-muted">Calculated using: Skills ({{ (weights.skills*100)|int }}%) + Interests ({{ (weights.interests*100)|int }}%)
+    + Quiz ({{ (weights.quiz*100)|int }}%) + Academic Background ({{ (weights.academic*100)|int }}%)</p>
+
+<div class="row g-4 mt-2">
+    {% for entry in top3 %}
+    <div class="col-md-4">
+        <div class="card card-custom career-card h-100 p-3">
+            <div class="d-flex justify-content-between align-items-start">
+                <h5>{{ entry.career.name }}</h5>
+                <span class="match-badge">{{ entry.final_score }}%</span>
+            </div>
+            <p class="text-muted small mb-1">{{ entry.career.description[:90] }}...</p>
+            <h6 class="mt-2">Why {{ entry.career.name }}?</h6>
+            <ul class="small">
+                {% for reason in entry.reasons %}
+                <li>{{ reason }}</li>
+                {% endfor %}
+            </ul>
+            <div class="mt-auto d-flex gap-2">
+                <a href="{{ url_for('student.career_details', career_id=entry.career.id) }}" class="btn btn-sm btn-outline-navy">Full Details</a>
+                <a href="{{ url_for('student.roadmap', career_id=entry.career.id) }}" class="btn btn-sm btn-outline-navy">Roadmap</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="card card-custom p-4 mt-4">
+    <h5>All Careers Ranked</h5>
+    <table class="table table-sm mt-2">
+        <thead><tr><th>Career</th><th>Skills</th><th>Interests</th><th>Quiz</th><th>Academic</th><th>Final Match</th></tr></thead>
+        <tbody>
+        {% for entry in all_ranked %}
+            <tr>
+                <td><a href="{{ url_for('student.career_details', career_id=entry.career.id) }}">{{ entry.career.name }}</a></td>
+                <td>{{ entry.skill_score }}%</td>
+                <td>{{ entry.interest_score }}%</td>
+                <td>{{ entry.quiz_score }}%</td>
+                <td>{{ entry.academic_score }}%</td>
+                <td><strong>{{ entry.final_score }}%</strong></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "student_base.html" %}
+{% set active = 'careers' %}
+{% block title %}{{ career.name }} - Career Compass{% endblock %}
+{% block student_content %}
+
+<div class="d-flex justify-content-between align-items-start">
+    <div>
+        <h3>{{ career.name }}</h3>
+        <p class="text-muted">{{ career.description }}</p>
+    </div>
+    {% if latest_result %}
+    <span class="match-badge fs-5">{{ latest_result.score }}% Match</span>
+    {% else %}
+    <a href="{{ url_for('student.assessment') }}" class="btn btn-sm btn-outline-navy">Take Assessment for Match %</a>
+    {% endif %}
+</div>
+
+<div class="card card-custom p-4 mt-3">
+    <h5>Skill Gap Analysis</h5>
+    <p class="text-muted small">Comparing your current skill levels to what this career requires.</p>
+    <table class="table">
+        <thead><tr><th>Skill</th><th>Your Level</th><th>Required Level</th><th>Progress</th><th>Status</th></tr></thead>
+        <tbody>
+        {% for row in skill_gap %}
+            <tr>
+                <td>{{ row.skill }}</td>
+                <td>{{ row.student_level }}</td>
+                <td>{{ row.required_level }}</td>
+                <td style="width: 200px;">
+                    <div class="progress skill-bar">
+                        <div class="progress-bar {{ 'bg-success' if row.status=='Good' else ('bg-warning' if row.status=='Improve' else 'bg-danger') }}"
+                             style="width: {{ row.ratio }}%"></div>
+                    </div>
+                </td>
+                <td class="status-{{ row.status|lower }}">{{ row.status }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card card-custom p-4 h-100">
+            <h5>Suggested Projects</h5>
+            {% for level in ["Beginner", "Intermediate", "Advanced"] %}
+            <h6 class="mt-2">{{ level }}</h6>
+            <ul>
+                {% for p in career.projects if p.level == level %}
+                <li>{{ p.title }}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-custom p-4 h-100">
+            <h5>Next Steps</h5>
+            <a href="{{ url_for('student.roadmap', career_id=career.id) }}" class="btn btn-amber mb-2 w-100">View Full Roadmap</a>
+            <a href="{{ url_for('student.compare') }}" class="btn btn-outline-navy w-100">Compare With Another Career</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

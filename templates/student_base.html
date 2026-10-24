@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sidebar p-0">
+            <a href="{{ url_for('student.dashboard') }}" class="{{ 'active' if active=='dashboard' }}">Dashboard</a>
+            <a href="{{ url_for('student.profile') }}" class="{{ 'active' if active=='profile' }}">Profile</a>
+            <a href="{{ url_for('student.assessment') }}" class="{{ 'active' if active=='assessment' }}">Career Assessment</a>
+            <a href="{{ url_for('student.compare') }}" class="{{ 'active' if active=='compare' }}">Career Comparison</a>
+            <a href="{{ url_for('main.careers') }}" class="{{ 'active' if active=='careers' }}">All Careers</a>
+        </div>
+        <div class="col-md-10 py-4">
+            {% block student_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

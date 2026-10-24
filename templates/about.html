@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}About - Career Compass{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2>About Career Compass</h2>
+    <p class="text-muted">Career Compass is a Final Year BSc Computer Science project that helps students
+        explore suitable career options based on their education, skills, programming knowledge, interests
+        and a short career assessment quiz.</p>
+
+    <h5 class="mt-4">How the recommendation system works</h5>
+    <p>This project uses a simple, explainable <strong>weighted scoring algorithm</strong> - not a complex
+        neural network or LLM. For every career, four factors are combined:</p>
+    <ul>
+        <li><strong>Skills (40%)</strong> - how well your current skill levels match what the career requires.</li>
+        <li><strong>Interests (30%)</strong> - how many of the career's related interests you selected.</li>
+        <li><strong>Assessment Quiz (20%)</strong> - points earned toward that career from your quiz answers.</li>
+        <li><strong>Academic Background (10%)</strong> - based on your CGPA.</li>
+    </ul>
+
+    <div class="alert alert-warning">
+        <strong>Important:</strong> Career recommendations are guidance only, based on the information you
+        provide. They are not guaranteed predictions of your future career. The system suggests suitable
+        career options based on your skills, interests and assessment results.
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "admin/admin_base.html" %}
+{% set active = 'questions' %}
+{% block title %}Add Question - Career Compass{% endblock %}
+{% block admin_content %}
+
+<h3>Add Quiz Question</h3>
+<form method="POST" class="card card-custom p-4 mt-3">
+    <div class="mb-3">
+        <label class="form-label">Question Text</label>
+        <input type="text" name="text" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category" class="form-select">
+            <option value="Technical">Technical Interest</option>
+            <option value="Personal">Personal Interest</option>
+            <option value="WorkPreference">Work Preference</option>
+        </select>
+    </div>
+
+    <hr>
+    <p class="text-muted small">Add up to 3 options. For each option, give points (0-3) toward the careers it best matches.</p>
+
+    {% for idx in range(3) %}
+    <div class="border rounded p-3 mb-3">
+        <label class="form-label">Option {{ idx + 1 }}</label>
+        <input type="text" name="option_text" class="form-control mb-2" placeholder="Option text">
+        <div class="row">
+            {% for career in careers %}
+            <div class="col-md-3 mb-1">
+                <label class="form-label small mb-0">{{ career.name }}</label>
+                <input type="number" min="0" max="3" name="points_{{ idx }}_{{ career.id }}" class="form-control form-control-sm" value="0">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-amber">Save Question</button>
+</form>
+
+{% endblock %}

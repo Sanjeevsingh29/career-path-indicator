@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sidebar p-0">
+            <a href="{{ url_for('admin.dashboard') }}" class="{{ 'active' if active=='dashboard' }}">Admin Dashboard</a>
+            <a href="{{ url_for('admin.manage_users') }}" class="{{ 'active' if active=='users' }}">Registered Students</a>
+            <a href="{{ url_for('admin.manage_careers') }}" class="{{ 'active' if active=='careers' }}">Manage Careers</a>
+            <a href="{{ url_for('admin.manage_questions') }}" class="{{ 'active' if active=='questions' }}">Manage Quiz Questions</a>
+        </div>
+        <div class="col-md-10 py-4">
+            {% block admin_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
