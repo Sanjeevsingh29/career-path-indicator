@@ -26,7 +26,9 @@ from routes.admin import admin_bp
 
 
 def create_app(config_override=None):
-    app = Flask(__name__)
+    template_dir = os.path.join(Config.BASE_DIR, "templates")
+    static_dir = os.path.join(Config.BASE_DIR, "static")
+    app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
     app.config.from_object(Config)
     if config_override:
         app.config.update(config_override)

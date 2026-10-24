@@ -8,3 +8,31 @@ if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 
 from app import app
+
+
+def normalize_path(path):
+    if not path:
+        return "/"
+    # Strip function route prefixes added by Vercel
+    for prefix in ["/api/index.py", "/api/index", "/api"]:
+        if path.startswith(prefix):
+            path = path[len(prefix):]
+            break
+    if not path or not path.startswith("/"):
+        path = "/" + path
+    return path
+
+
+class VercelMiddleware:
+    """WSGI middleware ensuring Flask receives clean routes on Vercel."""
+    def __init__(self, wsgi_app):
+        self.wsgi_app = wsgi_app
+
+    def __call__(self, environ, start_response):
+        # Vercel passes the actual requested client path in HTTP_X_MATCHED_PATH
+        raw_path = environ.get("HTTP_X_MATCHED_PATH") or environ.get("PATH_INFO", "")
+        environ["PATH_INFO"] = normalize_path(raw_path)
+        return self.wsgi_app(environ, start_response)
+
+
+app.wsgi_app = VercelMiddleware(app.wsgi_app)
