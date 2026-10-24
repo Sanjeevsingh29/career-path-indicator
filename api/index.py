@@ -8,12 +8,12 @@ if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 
 from app import app
+from routes.main import home
 
 
 def normalize_path(path):
     if not path:
         return "/"
-    # Strip function route prefixes added by Vercel
     for prefix in ["/api/index.py", "/api/index", "/api"]:
         if path.startswith(prefix):
             path = path[len(prefix):]
@@ -29,10 +29,17 @@ class VercelMiddleware:
         self.wsgi_app = wsgi_app
 
     def __call__(self, environ, start_response):
-        # Vercel passes the actual requested client path in HTTP_X_MATCHED_PATH
         raw_path = environ.get("HTTP_X_MATCHED_PATH") or environ.get("PATH_INFO", "")
         environ["PATH_INFO"] = normalize_path(raw_path)
         return self.wsgi_app(environ, start_response)
 
 
 app.wsgi_app = VercelMiddleware(app.wsgi_app)
+
+
+# Explicit route handlers for Vercel function invocation endpoints
+@app.route("/api/index.py")
+@app.route("/api/index")
+@app.route("/api")
+def vercel_entry_point():
+    return home()
